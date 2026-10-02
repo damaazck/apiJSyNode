@@ -23,7 +23,7 @@ const writeData = (data) => {
 };
 
 app.get("/", (req, res) => {
-    res.send("Bienvenido a mi primer api con Node JS");
+    res.sendFile("index.html", { root: "." });
 });
 
 app.get("/alumnos", (req, res) => {
@@ -34,58 +34,12 @@ app.get("/alumnos", (req, res) => {
 app.get("/alumnos/:id", (req, res) => {
     const data = readData();
     const id = parseInt(req.params.id);
-    const alumno = data.alumnos.find((alumno) => alumno.id === id);
+
+    const alumno = data.alumnos.find(
+        (alumno) => alumno.id === id
+    );
 
     res.json(alumno);
-});
-
-app.post("/alumnos", (req, res) => {
-    const data = readData();
-    const body = req.body;
-
-    const newAlumno = {
-        id: data.alumnos.length + 1,
-        ...body,
-    };
-
-    data.alumnos.push(newAlumno);
-    writeData(data);
-
-    res.json(newAlumno);
-});
-
-app.put("/alumnos/:id", (req, res) => {
-    const data = readData();
-    const body = req.body;
-    const id = parseInt(req.params.id);
-
-    const alumnoIndex = data.alumnos.findIndex(
-        (alumno) => alumno.id === id
-    );
-
-    data.alumnos[alumnoIndex] = {
-        ...data.alumnos[alumnoIndex],
-        ...body,
-    };
-
-    writeData(data);
-
-    res.json({ message: "Cambio realizado" });
-});
-
-app.delete("/alumnos/:id", (req, res) => {
-    const data = readData();
-    const id = parseInt(req.params.id);
-
-    const alumnoIndex = data.alumnos.findIndex(
-        (alumno) => alumno.id === id
-    );
-
-    data.alumnos.splice(alumnoIndex, 1);
-
-    writeData(data);
-
-    res.json({ message: "Alumno eliminado correctamente" });
 });
 
 app.listen(3000, () => {
