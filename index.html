@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    header {
+        background-color: #313131;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+
+    header h1 {
+        margin-bottom: 5px;
+    }
+
+    main {
+        width: 90%;
+        max-width: 1200px;
+        margin: 30px auto;
+    }
+
+    #alumnos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .alumno {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .alumno h2 {
+        color: #313131;
+        margin-bottom: 15px;
+    }
+
+    .alumno p {
+        margin: 8px 0;
+    }
+
+    .id {
+        color: #777;
+        font-size: 14px;
+    }
+
+    #mensaje {
+        text-align: center;
+        font-size: 18px;
+        margin: 30px;
+    }
+
+    @media (max-width: 800px) {
+        #alumnos {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 500px) {
+        #alumnos {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Lista de Alumnos</h1>
+    <p>Alumnos registrados en la API</p>
+</header>
+<main>
+    <div id="mensaje">Cargando alumnos...</div>
+    <section id="alumnos"></section>
+</main>
+<script>
+    const contenedor = document.getElementById("alumnos");
+    const mensaje = document.getElementById("mensaje");
+    async function cargarAlumnos() {
+        try {
+            const respuesta = await fetch("/alumnos");
+
+            if (!respuesta.ok) {
+                throw new Error("No se pudieron obtener los alumnos");
+            }
+            const alumnos = await respuesta.json();
+
+            mensaje.style.display = "none";
+
+            alumnos.forEach(alumno => {
+
+                const tarjeta = document.createElement("article");
+
+                tarjeta.classList.add("alumno");
+
+                tarjeta.innerHTML = `
+                    <p class="id">ID: ${alumno.id}</p>
+                    <h2>${alumno.nombre}</h2>
+
+                    <p><strong>Edad:</strong> ${alumno.edad} años</p>
+                    <p><strong>Carrera:</strong> ${alumno.carrera}</p>
+                    <p><strong>Semestre:</strong> ${alumno.semestre}</p>
+                    <p><strong>Promedio:</strong> ${alumno.promedio}</p>
+                `;
+
+                contenedor.appendChild(tarjeta);
+            });
+
+        } catch (error) {
+            mensaje.textContent = "Error al cargar los alumnos.";
+            console.error(error);
+        }
+    }
+    cargarAlumnos();
+</script>
+</body>
+</html>
