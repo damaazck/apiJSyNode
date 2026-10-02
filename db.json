@@ -1,0 +1,92 @@
+{
+    "alumnos": [
+        {
+            "id": 1,
+            "nombre": "Paloma",
+            "edad": 24,
+            "carrera": "DDMI",
+            "semestre": 4,
+            "promedio": 8.7
+        },
+        {
+            "id": 2,
+            "nombre": "Bertha",
+            "edad": 19,
+            "carrera": "DDMI",
+            "semestre": 4,
+            "promedio": 7.4
+        },
+        {
+            "id": 3,
+            "nombre": "Juan Carlos",
+            "edad": 21,
+            "carrera": "Sistemas Computacionales",
+            "semestre": 6,
+            "promedio": 10
+        },
+        {
+            "id": 4,
+            "nombre": "Kevin",
+            "edad": 22,
+            "carrera": "Medicina",
+            "semestre": 3,
+            "promedio": 6.8
+        },
+        {
+            "id": 5,
+            "nombre": "Ximena",
+            "edad": 20,
+            "carrera": "Biología",
+            "semestre": 5,
+            "promedio": 8.1
+        },
+        {
+            "id": 6,
+            "nombre": "Gerardo",
+            "edad": 27,
+            "carrera": "Derecho",
+            "semestre": 7,
+            "promedio": 9.5
+        },
+        {
+            "id": 7,
+            "nombre": "Ana",
+            "edad": 20,
+            "carrera": "Matemáticas",
+            "semestre": 6,
+            "promedio": 7.9
+        },
+        {
+            "id": 8,
+            "nombre": "Eduardo",
+            "edad": 23,
+            "carrera": "Literatura",
+            "semestre": 6,
+            "promedio": 8.3
+        },
+        {
+            "id": 9,
+            "nombre": "Benito",
+            "edad": 21,
+            "carrera": "Artes Visuales",
+            "semestre": 7,
+            "promedio": 7.1
+        },
+        {
+            "id": 10,
+            "nombre": "Perla",
+            "edad": 20,
+            "carrera": "Arquitectura",
+            "semestre": 5,
+            "promedio": 9
+        },
+        {
+            "id": 11,
+            "nombre": "Andrea",
+            "edad": 22,
+            "carrera": "DDMI",
+            "semestre": 4,
+            "promedio": 9.7
+        }
+    ]
+}

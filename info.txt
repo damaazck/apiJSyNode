@@ -1,0 +1,74 @@
+{
+  [
+    {
+      "nombre": "Paloma",
+      "edad": 24,
+      "carrera": "DDMI",
+      "semestre": 4,
+      "promedio": 8.7
+    },
+    {
+      "nombre": "Bertha",
+      "edad": 19,
+      "carrera": "DDMI",
+      "semestre": 4,
+      "promedio": 7.4
+    },
+    {
+      "nombre": "Juan",
+      "edad": 21,
+      "carrera": "Sistemas Computacionales",
+      "semestre": 5,
+      "promedio": 9.2
+    },
+    {
+      "nombre": "Kevin",
+      "edad": 22,
+      "carrera": "Medicina",
+      "semestre": 3,
+      "promedio": 6.8
+    },
+    {
+      "nombre": "Ximena",
+      "edad": 20,
+      "carrera": "Biología",
+      "semestre": 5,
+      "promedio": 8.1
+    },
+    {
+      "nombre": "Gerardo",
+      "edad": 27,
+      "carrera": "Derecho",
+      "semestre": 7,
+      "promedio": 9.5
+    },
+    {
+      "nombre": "Ana",
+      "edad": 20,
+      "carrera": "Matemáticas",
+      "semestre": 6,
+      "promedio": 7.9
+    },
+    {
+      "nombre": "Eduardo",
+      "edad": 23,
+      "carrera": "Literatura",
+      "semestre": 6,
+      "promedio": 8.3
+    },
+    {
+      "nombre": "Benito",
+      "edad": 21,
+      "carrera": "Artes Visuales",
+      "semestre": 7,
+      "promedio": 7.1
+    },
+    {
+      "nombre": "Perla",
+      "edad": 20,
+      "carrera": "Arquitectura",
+      "semestre": 5,
+      "promedio": 9.0
+    }
+  ]
+}

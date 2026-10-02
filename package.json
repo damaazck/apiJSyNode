@@ -1,0 +1,24 @@
+{
+  "name": "simple-nodejs-api",
+  "version": "1.0.0",
+  "description": "Esta es mi primer api desarrollada con node js",
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "license": "ISC",
+  "author": "Damaris Azcarate",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
